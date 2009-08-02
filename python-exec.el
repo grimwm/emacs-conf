@@ -1,0 +1,5 @@
+(defun eval-python-on-current-buffer ()
+  ((save-buffer)
+   (call-process "python" (buffer-file-name))))
+;(global-set-key (kbd "M-g p") 'eval-python-on-current-buffer)
+(provide 'python-exec)
