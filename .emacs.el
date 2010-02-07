@@ -28,7 +28,7 @@
 (column-number-mode t)
 (global-font-lock-mode t)
 (menu-bar-mode 0)
-(tool-bar-mode 0)
+(if (functionp 'tool-bar-mode) (tool-bar-mode 0))
 (show-paren-mode t)
 (global-hl-line-mode t)
 
