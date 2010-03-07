@@ -21,7 +21,6 @@
 (global-set-key (kbd "C-c s") (lambda () (interactive) (shell "*my-shell*") (rename-buffer "*shell*" t)))
 (global-set-key (kbd "C-c a") (lambda () (interactive) (ansi-term (if explicit-shell-file-name explicit-shell-file-name (getenv "SHELL")))))
 (global-set-key (kbd "C-c t") 'toggle-truncate-lines)
-(global-set-key (kbd "C-c hl") 'global-hl-line-mode)
 (global-set-key  [(f1)]  (lambda () (interactive) (manual-entry (current-word))))
 
 (transient-mark-mode t)
@@ -30,7 +29,7 @@
 (menu-bar-mode 0)
 (if (functionp 'tool-bar-mode) (tool-bar-mode 0))
 (show-paren-mode t)
-(global-hl-line-mode t)
+(if (display-graphic-p) (global-hl-line-mode t))
 
 
 (setq mac-command-modifier 'alt
