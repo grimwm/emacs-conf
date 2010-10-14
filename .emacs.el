@@ -4,6 +4,7 @@
 (load "my-shell")
 (load "php-mode")
 (load "color-theme")
+(load "hooks")
 
 (color-theme-initialize)
 (color-theme-gray30)
