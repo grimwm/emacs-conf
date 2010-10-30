@@ -32,6 +32,10 @@
 (show-paren-mode t)
 (if (display-graphic-p) (global-hl-line-mode t))
 
+(setq printer-name nil)
+(setq comint-input-ignoredups t)
+(setq comint-input-filter (function (lambda (str) (not (string-match "^\\(#\\|go\\|reset\\|\\s +$\\)" str)))))
+(setq comint-password-prompt-regexp "\\(\\([Oo]ld \\|[Nn]ew \\|'s \\|login \\|Kerberos \\|CVS \\|UNIX \\| SMB \\|[Ee]nter \\|^\\)[Pp]assword\\( (again)\\)?\\|pass phrase\\|Verify\\|\\(Enter\\|R\epeat\\|Bad\\) passphrase\\)\\(?:, try again\\)?\\(?: for [^:]+\\)?:\\s *\\'")
 
 (setq mac-command-modifier 'alt
       mac-option-modifier 'meta)
