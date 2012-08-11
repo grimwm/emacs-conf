@@ -5,6 +5,7 @@
 (load "php-mode")
 (load "color-theme")
 (load "hooks")
+(load "grep")
 
 (color-theme-initialize)
 (color-theme-gray30)
@@ -39,7 +40,6 @@
 
 (setq mac-command-modifier 'alt
       mac-option-modifier 'meta)
-(setq grep-command "egrep -nH -e ")
 (setq show-paren-style 'expression)
 (setq delete-auto-save-files t)
 (setq backup-directory-alist `(("." . ,(concat "/tmp/" (user-login-name)))))
