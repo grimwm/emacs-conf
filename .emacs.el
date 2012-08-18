@@ -5,7 +5,7 @@
 (load "php-mode")
 (load "color-theme")
 (load "hooks")
-(load "grep")
+(load "grep-addl")
 
 (color-theme-initialize)
 (color-theme-gray30)
@@ -44,8 +44,6 @@
 (setq delete-auto-save-files t)
 (setq backup-directory-alist `(("." . ,(concat "/tmp/" (user-login-name)))))
 (setq inhibit-splash-screen t)
-
-(if (functionp 'grep-compute-defaults) (grep-compute-defaults))
 
 (if (custom-facep 'show-paren-match) (progn
                                        (set-face-background 'show-paren-match nil)
