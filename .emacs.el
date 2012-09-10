@@ -6,6 +6,7 @@
 (load "color-theme")
 (load "hooks")
 (load "grep-addl")
+(load "js-setup")
 
 (color-theme-initialize)
 (color-theme-gray30)
@@ -17,7 +18,8 @@
 
 (global-set-key (kbd "S-<return>") 'newline)
 (global-set-key (kbd "C-h a") 'apropos)
-(global-set-key (kbd "C-c g") 'grep-find)
+;; (global-set-key (kbd "C-c g") (lambda () (interactive) (grep-find))
+;; (global-set-key (kbd "C-c g") 'grep-find)
 (global-set-key (kbd "C-c c") 'compile)
 (global-set-key (kbd "C-c m") 'man)
 (global-set-key (kbd "C-c s") (lambda () (interactive) (shell "*my-shell*") (rename-buffer "*shell*" t)))
