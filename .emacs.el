@@ -9,7 +9,8 @@
 (load "js-setup")
 
 (color-theme-initialize)
-(color-theme-gray30)
+;; (color-theme-gray30)
+(color-theme-goldenrod)
 
 (add-to-list 'auto-mode-alist '("\\.tcc\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
