@@ -40,6 +40,7 @@
 (setq comint-input-filter (function (lambda (str) (not (string-match "^\\(#\\|go\\|reset\\|\\s +$\\)" str)))))
 (setq comint-password-prompt-regexp "\\(\\(\\[sudo\\] \\|[Oo]ld \\|[Nn]ew \\|'s \\|login \\|Kerberos \\|CVS \\|UNIX \\| SMB \\|[Ee]nter \\|^\\)[Pp]assword\\( (again)\\)?\\|pass phrase\\|Verify\\|\\(Enter\\|R\epeat\\|Bad\\) passphrase\\)\\(?:, try again\\)?\\(?: for [^:]+\\)?:\\s *\\'")
 
+(setq kill-buffer-query-functions (remove 'process-kill-buffer-query-function kill-buffer-query-functions))
 (setq mac-command-modifier 'alt
       mac-option-modifier 'meta)
 (setq show-paren-style 'expression)
