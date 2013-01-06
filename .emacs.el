@@ -34,7 +34,7 @@
 (menu-bar-mode 0)
 (if (functionp 'tool-bar-mode) (tool-bar-mode 0))
 (show-paren-mode t)
-(if (display-graphic-p) (global-hl-line-mode t))
+(if (display-graphic-p) (global-hl-line-mode 0))
 
 (setq printer-name nil)
 (setq comint-input-ignoredups t)
