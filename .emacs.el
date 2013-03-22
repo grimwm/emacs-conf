@@ -7,6 +7,7 @@
 (load "hooks")
 (load "grep-addl")
 (load "js-setup")
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 
 (color-theme-initialize)
 ;; (color-theme-gray30)
@@ -16,6 +17,8 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . html-mode))
 ;(add-to-list 'warning-suppress-types '(undo discard-info))
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 (global-set-key (kbd "S-<return>") 'newline)
 (global-set-key (kbd "C-h a") 'apropos)
