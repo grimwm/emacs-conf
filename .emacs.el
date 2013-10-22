@@ -9,6 +9,8 @@
 (load "js-setup")
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 
+(setenv "PAGER" "cat")
+
 (color-theme-initialize)
 ;; (color-theme-gray30)
 (color-theme-goldenrod)
