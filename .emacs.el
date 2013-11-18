@@ -21,6 +21,7 @@
 ;(add-to-list 'warning-suppress-types '(undo discard-info))
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+(add-to-list 'auto-mode-alist '("\\.m$" . matlab-mode))
 
 (global-set-key (kbd "S-<return>") 'newline)
 (global-set-key (kbd "C-h a") 'apropos)
