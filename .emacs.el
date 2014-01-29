@@ -55,13 +55,14 @@
 (setq backup-directory-alist `(("." . ,(concat "/tmp/" (user-login-name)))))
 (setq inhibit-splash-screen t)
 
-(if (custom-facep 'show-paren-match) (progn
-                                       (set-face-background 'show-paren-match nil)
-                                       (set-face-foreground 'show-paren-match "yellow")
-                                       (set-face-bold-p 'show-paren-match t)))
+(if (custom-facep 'show-paren-match)
+    (progn
+      (set-face-background 'show-paren-match nil)
+      (set-face-foreground 'show-paren-match "yellow")
+      (set-face-bold-p 'show-paren-match t)))
 
-;(setq c-default-style
-;      '((c-mode . "bsd") (c++-mode . "bsd")))
+(setq c-default-style "bsd")
+(setq-default c-basic-offset 4)
 
 (eval-after-load "shell" '(user-login-name))
 (defun my-shell-mode-hook ()
