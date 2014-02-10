@@ -3,7 +3,7 @@
 (load "python-exec")
 (load "my-shell")
 (load "php-mode")
-(load "color-theme")
+;; (load "color-theme")
 (load "hooks")
 (load "grep-addl")
 (load "js-setup")
@@ -11,9 +11,9 @@
 
 (setenv "PAGER" "cat")
 
-(color-theme-initialize)
+;; (color-theme-initialize)
 ;; (color-theme-gray30)
-(color-theme-goldenrod)
+;; (color-theme-goldenrod)
 
 (add-to-list 'auto-mode-alist '("\\.tcc\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
