@@ -10,6 +10,7 @@
 ;; (load "grep-extra")
 (load "js-setup")
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(load "cedet")
 
 (setenv "PAGER" "cat")
 
@@ -79,7 +80,8 @@
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 
 (defun my-c++-mode-hook ()
-  (setq compile-command "gmake -k "))
+  (setq compile-command "gmake -k ")
+  (c-set-offset 'innamespace [0]))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 (defun my-java-mode-hook ()
