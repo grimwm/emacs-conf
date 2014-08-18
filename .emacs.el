@@ -4,19 +4,19 @@
 (load "python-exec")
 (load "my-shell")
 (load "php-mode")
-(load "color-theme")
+;; (load "color-theme")
 (load "hooks")
 (load "grep-addl")
 ;; (load "grep-extra")
 (load "js-setup")
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-(load "cedet")
+;; (load "cedet")
 
 (setenv "PAGER" "cat")
 
-(color-theme-initialize)
+;; (color-theme-initialize)
 ;; (color-theme-gray30)
-(color-theme-goldenrod)
+;; (color-theme-goldenrod)
 
 (add-to-list 'auto-mode-alist '("\\.tcc\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
@@ -67,7 +67,7 @@
 
 (setq c-default-style "bsd")
 (setq-default c-basic-offset 4
-              tab-width 4
+              tab-width 8
               indent-tabs-mode nil)
 
 (eval-after-load "shell" '(user-login-name))
