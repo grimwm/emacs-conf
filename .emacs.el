@@ -66,7 +66,7 @@
       (set-face-bold-p 'show-paren-match t)))
 
 (setq c-default-style "bsd")
-(setq-default c-basic-offset 4
+(setq-default c-basic-offset 2
               tab-width 8
               indent-tabs-mode nil)
 
@@ -81,7 +81,8 @@
 
 (defun my-c++-mode-hook ()
   (setq compile-command "gmake -k ")
-  (c-set-offset 'innamespace [0]))
+  (c-set-offset 'innamespace [0])
+  (c-set-offset 'inextern-lang [0]))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 (defun my-java-mode-hook ()
