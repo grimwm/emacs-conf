@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 ;; (add-to-list 'load-path "~/.emacs.d/php-mode-1.5.0")
 (load "indent-all")
 (load "python-exec")
